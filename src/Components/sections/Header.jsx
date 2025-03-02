@@ -5,7 +5,7 @@ import { useTheme } from "../ThemeProvider";
 const Header = () => {
   const { darkMode, setDarkMode } = useTheme();
   const [menuActive, setMenuActive] = useState(false);
-  const [settingsMenuActive, setSettingsMenuActive] = useState(false); // State för inställningsmenyn
+  const [settingsMenuActive, setSettingsMenuActive] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -14,11 +14,11 @@ const Header = () => {
 
   const closeMenu = () => {
     setMenuActive(false);
-    setSettingsMenuActive(false); // Stäng inställningsmenyn när huvudmenyn stängs
+    setSettingsMenuActive(false);
   };
 
   const toggleSettingsMenu = () => {
-    setSettingsMenuActive(!settingsMenuActive); // Växla inställningsmenyn
+    setSettingsMenuActive(!settingsMenuActive);
   };
 
   useEffect(() => {
@@ -44,32 +44,32 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/create" onClick={closeMenu}>
+              <Link to="/create-project" onClick={closeMenu}>
                 Skapa Projekt
               </Link>
             </li>
             <li>
-              <Link to="/projectList" onClick={closeMenu}>
+              <Link to="/project-list" onClick={closeMenu}>
                 Projektlista
               </Link>
             </li>
             <li>
-              <Link to="/" onClick={closeMenu}>
+              <Link to="/about" onClick={closeMenu}>
                 Om oss
               </Link>
             </li>
             <li
               className={`settings-menu ${settingsMenuActive ? "active" : ""}`}
             >
-              <a onClick={toggleSettingsMenu}>Inställningar</a>
+              <span onClick={toggleSettingsMenu}>Inställningar</span>
               <ul className="submenu">
                 <li>
-                  <Link to="/CreateCustomer" onClick={closeMenu}>
+                  <Link to="/create-customer" onClick={closeMenu}>
                     Skapa Kund
                   </Link>
                 </li>
                 <li>
-                  <Link to="/CreateEmployee" onClick={closeMenu}>
+                  <Link to="/create-employee" onClick={closeMenu}>
                     Skapa Anställd
                   </Link>
                 </li>
