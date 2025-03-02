@@ -54,7 +54,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={closeMenu}>
+              <Link to="/" onClick={closeMenu}>
                 Om oss
               </Link>
             </li>
