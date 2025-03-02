@@ -65,12 +65,12 @@ const Header = () => {
               <ul className="submenu">
                 <li>
                   <Link to="/create-customer" onClick={closeMenu}>
-                    Skapa Kund
+                    Skapa En Ny Kund
                   </Link>
                 </li>
                 <li>
                   <Link to="/create-employee" onClick={closeMenu}>
-                    Skapa Anställd
+                    Skapa En Ny Anställd
                   </Link>
                 </li>
               </ul>
