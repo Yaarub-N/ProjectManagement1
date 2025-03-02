@@ -34,7 +34,7 @@ const CreateEmployee = () => {
 
     try {
       await createEmployee(employee);
-      navigate("/employee-list");
+      navigate("/");
     } catch (error) {
       console.error("API error:", error);
       setError("Misslyckades med att skapa anställd.");

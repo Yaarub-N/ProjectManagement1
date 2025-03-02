@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createCustomer } from "../../services/CustomerService"; 
-import CustomerForm from "../../Pages/CustomerFormPage/CustomerForm"; 
-import "../../index.css"; 
+import { createCustomer } from "../../services/CustomerService";
+import CustomerForm from "../../Pages/CustomerFormPage/CustomerForm";
+import "../../index.css";
 
 const CreateCustomer = () => {
   const navigate = useNavigate();
@@ -26,14 +26,14 @@ const CreateCustomer = () => {
       [name]: value,
     }));
   };
-  // chatgpt 4o 
+  // chatgpt 4o
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
       await createCustomer(customer);
-      navigate("/customer-list"); // 🟢 Ändrade URL till lowercase för konsekvens
+      navigate("/"); // 🟢 Ändrade URL till lowercase för konsekvens
     } catch (error) {
       console.error("API error:", error);
       setError("Misslyckades med att skapa kund.");
@@ -41,7 +41,7 @@ const CreateCustomer = () => {
       setLoading(false);
     }
   };
-//
+  //
   return (
     <CustomerForm
       customer={customer}
